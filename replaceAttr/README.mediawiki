@@ -48,6 +48,8 @@ jQuery('div.example').replaceAttr(
 * 動作サンプルを書く
 * ドキュメントを充実させる
 == History ==
+=== 2012-02-03 - v1.0.1 - 02 ===
+* QUnit によるテストコード追加
 === 2012-02-03 - v1.0.1 - 01 ===
 * ファイル命名規約変更
 * replacement に &quot;#1&quot; や &quot;#{2}&quot; のような形式を受け入れるように修正
