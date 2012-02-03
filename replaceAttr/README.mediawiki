@@ -1,0 +1,30 @@
+= jQuery replaceAttr =
+== Summary ==
+jQuery replaceAttr は、マッチした要素の属性値を正規表現を用いて置換します。
+== How To ==
+=== 基本的な使い方 ===
+<code>
+jQuery('div.example').replaceAttr('data-name', /(hoge|fuga|piyo)-(\d+)/, function(whole, match1, match2, offset, matched) { return (match1 + '-' (parseInt(matche2) + 1)); });
+</code>
+== Methods ==
+<code>
+.replaceAttr(attributeName, pattern, replacement);
+</code>
+; attributeName
+: 置換対象の属性名
+; pattern
+: 属性値に対してマッチさせるパターン
+; replacement
+: 置換する文字列か関数
+== Issue ==
+* replacement に対して &quot;hoge#{1}fuga#{2}&quot; みたいな形で後方参照出来るようにする
+* テスト書く
+* 動作サンプルを書く
+* ドキュメントを充実させる
+== History ==
+=== 2012-01-29 - v1.0.0 - 01 ===
+* ライブラリ本体追加
+* README 整備
+
+
+
