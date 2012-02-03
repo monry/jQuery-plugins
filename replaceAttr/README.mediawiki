@@ -3,8 +3,34 @@
 jQuery replaceAttr は、マッチした要素の属性値を正規表現を用いて置換します。
 == How To ==
 === 基本的な使い方 ===
+==== 文字列を用いた置換 ====
 <code>
-jQuery('div.example').replaceAttr('data-name', /(hoge|fuga|piyo)-(\d+)/, function(whole, match1, match2, offset, matched) { return (match1 + '-' (parseInt(matche2) + 1)); });
+jQuery('img.example').replaceAttr(
+  'data-mode'
+  , '-on'
+  , '-off'
+);
+</code>
+==== 正規表現を用いた置換 ====
+<code>
+jQuery('img.example').replaceAttr(
+  'data-mode'
+  , /-o(n|ff)$/
+  , function(whole, match1, offset matched) {
+    if (match1 == 'n') {
+      return '-off';
+    }
+    return '-on';
+  }
+);
+</code>
+==== 正規表現を用いた簡易置換 ====
+<code>
+jQuery('div.example').replaceAttr(
+  'data-date'
+  , /^(\d{4})\/(\d{2})\/(\d{2})$/
+  , '#1-#2-#3'
+);
 </code>
 == Methods ==
 <code>
@@ -16,15 +42,16 @@ jQuery('div.example').replaceAttr('data-name', /(hoge|fuga|piyo)-(\d+)/, functio
 : 属性値に対してマッチさせるパターン
 ; replacement
 : 置換する文字列か関数
+: 文字列の場合、&quot;#1&quot; や &quot;#{2}&quot; と指定すると、マッチングの際にグルーピング指定した箇所に置換する
 == Issue ==
-* replacement に対して &quot;hoge#{1}fuga#{2}&quot; みたいな形で後方参照出来るようにする
 * テスト書く
 * 動作サンプルを書く
 * ドキュメントを充実させる
 == History ==
+=== 2012-02-03 - v1.0.1 - 01 ===
+* ファイル命名規約変更
+* replacement に &quot;#1&quot; や &quot;#{2}&quot; のような形式を受け入れるように修正
 === 2012-01-29 - v1.0.0 - 01 ===
 * ライブラリ本体追加
 * README 整備
-
-
 
