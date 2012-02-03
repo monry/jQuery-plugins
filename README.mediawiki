@@ -6,6 +6,8 @@ monry がちょこちょこ作った jQuery Plugin 達を集めた github リポ
 = Plugin list =
 ; sequal
 : &quot;続きを読む&quot; を実装するためのプラグイン
+; replaceAttr
+: 属性値の置換を提供するプラグイン
 ; placeholder
 : いわゆるプレースホルダを実装するためのプラグイン
 : 2012-01-29 現在、未コミット
