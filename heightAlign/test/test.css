@@ -1,0 +1,43 @@
+.red {
+  color: #f00;
+}
+
+#qunit-fixture-normal {
+  width: 30em;
+  overflow: hidden;
+}
+
+#qunit-fixture-normal div {
+  float: left;
+  width: 10em;
+}
+
+#qunit-fixture-attr {
+  width: 15em;
+  overflow: hidden;
+}
+
+#qunit-fixture-attr div {
+  float: left;
+  width: 5em;
+}
+
+#qunit-fixture-cycle {
+  width: 15em;
+  overflow: hidden;
+}
+
+#qunit-fixture-cycle div {
+  float: left;
+  width: 5em;
+}
+
+#qunit-fixture-mix {
+  width: 30em;
+  overflow: hidden;
+}
+
+#qunit-fixture-mix div {
+  float: left;
+  width: 5em;
+}

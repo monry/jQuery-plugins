@@ -1,0 +1,42 @@
+= jQuery heightAlign =
+== Summary ==
+jQuery heightAlign は、マッチした複数の要素の高さを揃えるためのプラグインです。
+== How To ==
+=== 基本的な使い方 ===
+==== マッチする要素全ての高さを揃える ====
+<code>
+jQuery('.align').heightAlign();
+</code>
+=== オプションを指定 ===
+==== マッチする要素を属性値に縛りを付けて高さを揃える ====
+<code>
+jQuery('.align').heightAlign({group_attr: 'data-group'});
+</code>
+==== マッチする要素をn個ずつのグループに分けて高さを揃える ====
+<code>
+jQuery('.align').heightAlign({group_cycle: 4});
+</code>
+==== 上記二つを組み合わせる ====
+<code>
+jQuery('.align').heightAlign({group_attr: 'data-group', group_cycle: 4});
+</code>
+== Methods ==
+<code>
+.replaceAttr([options]);
+</code>
+; options
+: オプション
+:; group_attr
+:: 任意の属性値単位にグルーピングする
+:; group_cycle
+:: 出現回数単位にグルーピングする
+== Issue ==
+* 動作サンプルを書く
+* ドキュメントを充実させる
+== History ==
+=== 2012-02-08 - v1.0.0 - 01 ===
+* ライブラリ本体追加
+* minified なライブラリ本体追加
+* テストコード追加
+* README 整備
+

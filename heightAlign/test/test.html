@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+  <head>
+    <title>test - jQuery.heightAlign</title>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="test.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>
+    <script type="text/javascript" src="../heightAlign.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+  </head>
+  <body>
+    <h1 id="qunit-header">jQuery.heightAlign</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture">
+      <div id="qunit-fixture-normal">
+        <div>
+          <p class="align">あいうえおかきくけこ</p>
+          <p class="red">1</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">2</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ</p>
+          <p class="red">3</p>
+        </div>
+      </div>
+      <div id="qunit-fixture-attr">
+        <div>
+          <p class="align" data-row="1" data-col="1">あいうえお</p>
+          <p class="red">1-1</p>
+        </div>
+        <div>
+          <p class="align" data-row="1" data-col="2">あいうえおかきくけこ</p>
+          <p class="red">1-2</p>
+        </div>
+        <div>
+          <p class="align" data-row="1" data-col="3">あいうえおかきくけこさしすせそ</p>
+          <p class="red">1-3</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="1">あいうえおかきくけこ</p>
+          <p class="red">2-1</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="2">あいうえおかきくけこさしすせそ</p>
+          <p class="red">2-2</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="3">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">2-3</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="1">あいうえおかきくけこさしすせそ</p>
+          <p class="red">3-1</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="2">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">3-2</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="3">あいうえおかきくけこさしすせそたちつてとなにぬねの</p>
+          <p class="red">3-3</p>
+        </div>
+      </div>
+      <div id="qunit-fixture-cycle">
+        <div>
+          <p class="align">あいうえお</p>
+          <p class="red">1-1</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこ</p>
+          <p class="red">1-2</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそ</p>
+          <p class="red">1-3</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこ</p>
+          <p class="red">2-1</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそ</p>
+          <p class="red">2-2</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">2-3</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそ</p>
+          <p class="red">3-1</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">3-2</p>
+        </div>
+        <div>
+          <p class="align">あいうえおかきくけこさしすせそたちつてとなにぬねの</p>
+          <p class="red">3-3</p>
+        </div>
+      </div>
+      <div id="qunit-fixture-mix">
+        <div>
+          <p class="align" data-row="1" data-col="1">あいうえお</p>
+          <p class="red">1-1</p>
+        </div>
+        <div>
+          <p class="align" data-row="1" data-col="2">あいうえおかきくけこ</p>
+          <p class="red">1-2</p>
+        </div>
+        <div>
+          <p class="align" data-row="1" data-col="3">あいうえおかきくけこさしすせそ</p>
+          <p class="red">1-3</p>
+        </div>
+        <div>
+          <p class="align" data-row="1" data-col="4">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">1-4</p>
+        </div>
+        <div>
+          <p class="align" data-row="1" data-col="5">あいうえおかきくけこさしすせそたちつてとなにぬねの</p>
+          <p class="red">1-5</p>
+        </div>
+        <div>
+          <p class="align" data-row="1" data-col="6">あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ</p>
+          <p class="red">1-6</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="1">あいうえおかきくけこ</p>
+          <p class="red">2-1</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="2">あいうえおかきくけこさしすせそ</p>
+          <p class="red">2-2</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="3">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">2-3</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="4">あいうえおかきくけこさしすせそたちつてとなにぬねの</p>
+          <p class="red">2-4</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="5">あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ</p>
+          <p class="red">2-5</p>
+        </div>
+        <div>
+          <p class="align" data-row="2" data-col="6">あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめも</p>
+          <p class="red">2-6</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="1">あいうえおかきくけこさしすせそ</p>
+          <p class="red">3-1</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="2">あいうえおかきくけこさしすせそたちつてと</p>
+          <p class="red">3-2</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="3">あいうえおかきくけこさしすせそたちつてとなにぬねの</p>
+          <p class="red">3-3</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="4">あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ</p>
+          <p class="red">3-4</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="5">あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめも</p>
+          <p class="red">3-5</p>
+        </div>
+        <div>
+          <p class="align" data-row="3" data-col="6">あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゐゆゑよ</p>
+          <p class="red">3-6</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
