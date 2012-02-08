@@ -2,8 +2,6 @@
  * jQuery.sequel - jQuery Plugin
  *
  * Version: 1.0.0
- * Revision: $Rev$
- * Date: $Date$
  */
 void function($) {
   $.fn.sequel = function(option_list) {

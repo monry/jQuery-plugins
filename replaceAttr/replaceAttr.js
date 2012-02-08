@@ -2,8 +2,6 @@
  * jQuery.replaceAttr - jQuery Plugin
  *
  * Version: 1.0.1
- * Revision: $Rev$
- * Date: $Date$
  */
 void function($) {
   $.fn.replaceAttr = function(attribute_name, pattern, replacement) {
