@@ -1,7 +1,8 @@
-/*
+/**
  * jQuery.replaceAttr - jQuery Plugin
  *
- * Version: 1.0.1
+ * @author Tetsuya MORI <monry84@gmail.com>
+ * @version 1.0.1
  */
 void function($) {
   $.fn.replaceAttr = function(attribute_name, pattern, replacement) {

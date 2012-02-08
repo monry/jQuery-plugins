@@ -1,7 +1,8 @@
-/*
+/**
  * jQuery.sequel - jQuery Plugin
  *
- * Version: 1.0.0
+ * @author Tetsuya MORI <monry84@gmail.com>
+ * @version 1.0.0
  */
 void function($) {
   $.fn.sequel = function(option_list) {
