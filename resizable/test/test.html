@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+  <head>
+    <title>test - jQuery.heightAlign</title>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="test.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>-->
+    <script type="text/javascript" src="../resizable.js"></script>
+    <script type="text/javascript">
+    // <![CDATA[
+    $(
+      function() {
+        $('#test').resizable();
+      }
+    );
+    // ]]>
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="test" style="width: 200px; height: 100px; border: solid 1px #000000;">
+      </div>
+    </div>
+  </body>
+</html>
